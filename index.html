@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>
+            rating
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-color: bisque;">
+        <header style="background-color: rgba(255, 234, 138, 0.5); height: auto;" witdh>
+            <h1><br>Rate einen Charakter von 1 bis 10</h1>
+            <br>
+        </header>
+    <div id="box1">
+        <button id="next-btn" 
+        style="font-size: larger; border-radius: 60px; background-color: bisque; height: 60px; width: 60px;color: rgb(220, 20, 60); box-shadow: 5px 5px 100px color(srgb 0 0 0 ); position: absolute;margin-top: 300px; margin-left: 30px;">
+        X</button>
+        <button id="next-button" 
+        style="font-size: larger; border-radius: 60px; background-color: bisque; height: 60px; width: 60px;color: rgb(20, 220, 47); box-shadow: 5px 5px 100px color(srgb 0 0 0 ); position: absolute;margin-top: 300px; margin-left: 200px;">
+        v</button>
+        <button id="prev-btn" 
+        style="font-size: large; border-radius: 60px; background-color: bisque; height: 50px; width: 80px;color: rgb(20, 220, 47); box-shadow: 5px 5px 100px color(srgb 0 0 0 ); position: absolute;margin-top: 330px; margin-left: 105px;">
+        zurück</button>
+        <img id="image" src=""
+        style="margin-left: 50px;margin-right: 50px;margin-top: 20px;" height="200px">
+
+        <script>
+            const imageCount = 255; // Anzahl deiner Bilder
+let currentImage = 1;
+
+document.getElementById("next-btn").addEventListener("click", () => {
+    currentImage = (currentImage % imageCount) + 1;
+    document.getElementById("image").src = `pic1 (${currentImage}).avif`; // Anpassen an deine Bildnamen
+});
+document.getElementById("next-button").addEventListener("click", () => {
+    currentImage = (currentImage % imageCount) + 1;
+    document.getElementById("image").src = `pic1 (${currentImage}).avif`; // Anpassen an deine Bildnamen
+});
+
+document.getElementById("prev-btn").addEventListener("click", () => {
+    currentImage = ((currentImage - 2 + imageCount) % imageCount) + 1;
+    document.getElementById("image").src = `pic1 (${currentImage}).avif`; // Anpassen an deine Bildnamen
+});
+
+// Erstes Bild laden
+document.getElementById("image").src = `pic1 (${currentImage}).avif`; // Anpassen an deine Bildnamen
+        </script>
+
+    </body>
+    <body>
+
+<p><footer style="height: 100; background-color: rgba(255, 234, 138, 0.5);">
+            <h1>
+                das ist doch geil
+            </h1>
+</footer></p>
+    </body>
+    </html>
